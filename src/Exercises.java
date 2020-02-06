@@ -58,12 +58,18 @@ public class Exercises {
 	}
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
+		if (numbers == null || numbers.size() < 1){
+			return false;
+		}
 		// write your code here
 
 		return false;	// default return value to ensure compilation
 	}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
+		if (numbers == null || numbers.size() < 3){
+			return false;
+		}
 		// write your code here
 
 		return false;	// default return value to ensure compilation
