@@ -14,7 +14,7 @@ public class Exercises {
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
 		if (values == null || values.size < n || n < 0) {
-			return empty; 
+			return empty;
 	}
 		// write your code here
 
@@ -22,12 +22,18 @@ public class Exercises {
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
+		if (numbers == null || numbers.size() < 1 ){
+			return -1;
+		}
 		// write your code here
 
 		return -1;		// default return value to ensure compilation
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
+		if (numbers == null || numbers.size() < 3 || numbers.size() % 2 == 0){
+			return -1;
+		}
 		// write your code here
 
 		return -1;		// default return value to ensure compilation
