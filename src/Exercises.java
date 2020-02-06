@@ -8,12 +8,20 @@ public class Exercises {
 		}
 
 		// write your code here
-
-		return false;	// default return value to ensure compilation
+		if (a.get(0) == b.get(0)) {
+			return true;
+		} else if (a.get(a.size() - 1) == b.get(b.size() - 1 )){
+			return true;
+		} else {
+			return false;	// default return value to ensure compilation
+		}
 	}
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
-		if (values == null || values.size < n || n < 0) {
+
+		ArrayList<String> empty = new ArrayList<String>();
+
+		if (values == null || values.size() < n || n < 0) {
 			return empty;
 	}
 		// write your code here
@@ -40,6 +48,9 @@ public class Exercises {
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
+
+		ArrayList<String> empty = new ArrayList<String>();
+
 		if (values == null || values.size() < 3 || values.size() % 2 == 0){
 			return empty;
 		}
@@ -99,7 +110,7 @@ public class Exercises {
 		if (containsNull) {
 			return -1;
 		}
-		
+
 		// write your code here
 
 		return -1;		// default return value to ensure compilation
