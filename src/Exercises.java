@@ -40,12 +40,18 @@ public class Exercises {
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
+		if (values == null || values.size() < 3 || values.size() % 2 == 0){
+			return empty;
+		}
 		// write your code here
 
 		return null;	// default return value to ensure compilation
 	}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
+		if (numbers == null || numbers.size() < 3) {
+			return false;
+		}
 		// write your code here
 
 		return false;	// default return value to ensure compilation
