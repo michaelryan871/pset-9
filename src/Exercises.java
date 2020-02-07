@@ -76,9 +76,21 @@ public class Exercises {
 		if (numbers == null || numbers.size() < 3 || numbers.size() % 2 == 0){
 			return -1;
 		}
+		 
 		// write your code here
+		
+		double max = numbers.get(0);
+		if (max <= numbers.get(numbers.size() - 1)){
+				max = numbers.get(numbers.size() - 1);
+		}
+		if (max <= numbers.get(numbers.size() / 2)){
+				max = numbers.get(numbers.size() / 2);
+		}
+				
+		return max;
 
-		return -1;		// default return value to ensure compilation
+		
+		// return -1;		// default return value to ensure compilation
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
