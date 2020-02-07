@@ -25,8 +25,24 @@ public class Exercises {
 			return empty;
 	}
 		// write your code here
-
-		return null;	// default return value to ensure compilation
+		
+		ArrayList<String> result = new ArrayList<>(); 
+		int length = values.size(); 
+		int index = n; 
+		
+		
+		for (int i = 0; i < n; i++){
+			result.add(values.get(i));
+		}
+		
+		for (int j = n; j < 2 * n; j++){
+			result.add(values.get(length-index));
+			index--;
+		}
+		
+		return result; 
+		
+		// return null;	// default return value to ensure compilation
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
