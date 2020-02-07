@@ -8,6 +8,7 @@ public class Exercises {
 		}
 
 		// write your code here
+		
 		if (a.get(0) == b.get(0)) {
 			return true;
 		} else if (a.get(a.size() - 1) == b.get(b.size() - 1 )){
@@ -49,9 +50,26 @@ public class Exercises {
 		if (numbers == null || numbers.size() < 1 ){
 			return -1;
 		}
+			
 		// write your code here
+		
+		int numMax = numbers.get(0); 
+		int numMin = numbers.get(0); 
+		
+		for (int i = 0; i < numbers.size(); i++) {
+			if (numbers.get(i) > numMax) {
+				numMax = numbers.get(i);
+			}
+			if (numbers.get(i) < numMin) {
+				numMin = numbers.get(i);
+			}
+		}
 
-		return -1;		// default return value to ensure compilation
+		int differnce = numMax - numMin;
+		return differnce;
+		
+
+		// return -1;		// default return value to ensure compilation
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
