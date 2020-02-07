@@ -186,8 +186,23 @@ public class Exercises {
 		if (numbers == null || numbers.size() < 2){
 			return false;
 		}
+
 		// write your code here
 
+		for (int i = 0; i < numbers.size(); i++) {
+			int numOne = 0;
+			int numTwo = 0;
+
+			for (int x = 0; x < i; x++){
+				numOne = numOne + numbers.get(x);
+			}
+			for (int z = i; z < numbers.size(); z++) {
+				numTwo = numTwo + numbers.get(z);
+			}
+			if (numOne == numTwo){
+				return true;
+			}
+		}
 		return false;	// default return value to ensure compilation
 	}
 
