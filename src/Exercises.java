@@ -167,9 +167,19 @@ public class Exercises {
 		if (numbers == null || numbers.size() < 3){
 			return false;
 		}
+
 		// write your code here
 
-		return false;	// default return value to ensure compilation
+		boolean isConsecutive = false;
+		for (int i = 2; i < numbers.size(); i++){
+			if (numbers.get(i) % 2 == numbers.get(i - 1) % 2 &&	numbers.get(i) % 2 == numbers.get(i - 2) % 2){
+						isConsecutive = true;
+			}
+		}
+
+		return isConsecutive;
+
+		// return false;	// default return value to ensure compilation
 	}
 
 	public boolean balance(ArrayList<Integer> numbers) {
