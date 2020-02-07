@@ -8,7 +8,7 @@ public class Exercises {
 		}
 
 		// write your code here
-		
+
 		if (a.get(0) == b.get(0)) {
 			return true;
 		} else if (a.get(a.size() - 1) == b.get(b.size() - 1 )){
@@ -26,23 +26,23 @@ public class Exercises {
 			return empty;
 	}
 		// write your code here
-		
-		ArrayList<String> result = new ArrayList<>(); 
-		int length = values.size(); 
-		int index = n; 
-		
-		
+
+		ArrayList<String> result = new ArrayList<>();
+		int length = values.size();
+		int index = n;
+
+
 		for (int i = 0; i < n; i++){
 			result.add(values.get(i));
 		}
-		
+
 		for (int j = n; j < 2 * n; j++){
 			result.add(values.get(length-index));
 			index--;
 		}
-		
-		return result; 
-		
+
+		return result;
+
 		// return null;	// default return value to ensure compilation
 	}
 
@@ -50,12 +50,12 @@ public class Exercises {
 		if (numbers == null || numbers.size() < 1 ){
 			return -1;
 		}
-			
+
 		// write your code here
-		
-		int numMax = numbers.get(0); 
-		int numMin = numbers.get(0); 
-		
+
+		int numMax = numbers.get(0);
+		int numMin = numbers.get(0);
+
 		for (int i = 0; i < numbers.size(); i++) {
 			if (numbers.get(i) > numMax) {
 				numMax = numbers.get(i);
@@ -67,7 +67,7 @@ public class Exercises {
 
 		int differnce = numMax - numMin;
 		return differnce;
-		
+
 
 		// return -1;		// default return value to ensure compilation
 	}
@@ -76,9 +76,9 @@ public class Exercises {
 		if (numbers == null || numbers.size() < 3 || numbers.size() % 2 == 0){
 			return -1;
 		}
-		 
+
 		// write your code here
-		
+
 		double max = numbers.get(0);
 		if (max <= numbers.get(numbers.size() - 1)){
 				max = numbers.get(numbers.size() - 1);
@@ -86,10 +86,10 @@ public class Exercises {
 		if (max <= numbers.get(numbers.size() / 2)){
 				max = numbers.get(numbers.size() / 2);
 		}
-				
+
 		return max;
 
-		
+
 		// return -1;		// default return value to ensure compilation
 	}
 
@@ -101,8 +101,29 @@ public class Exercises {
 			return empty;
 		}
 		// write your code here
+		boolean containsNull = false;
+		for (int i = 0; i < values.size(); i++){
+			if (values.get(i) == null){
+				containsNull = true;
+			}
+		}
 
-		return null;	// default return value to ensure compilation
+		if (containsNull) {
+			return empty;
+		}
+
+		int half = values.size() / 2;
+		int first = half - 1;
+		int last = half + 1;
+
+		ArrayList<String> result = new ArrayList<String>();
+		result.add(values.get(first));
+		result.add(values.get(half));
+		result.add(values.get(last));
+
+		return result;
+
+		// return null;	// default return value to ensure compilation
 	}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
