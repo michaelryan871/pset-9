@@ -130,10 +130,29 @@ public class Exercises {
 		if (numbers == null || numbers.size() < 3) {
 			return false;
 		}
+
 		// write your code here
 
-		return false;	// default return value to ensure compilation
-	}
+		int lowestNumber = numbers.get(0);
+		int middleNumber = numbers.get(1);
+		int finalNumber = numbers.get(2);
+
+		for (int i = 1; i < numbers.size() - 1; i++) {
+			if ( lowestNumber < middleNumber && middleNumber < finalNumber) {
+				return true;
+			}
+
+
+			if (i + 2 < numbers.size()) {
+				lowestNumber = numbers.get(i);
+				middleNumber = numbers.get(i + 1);
+				finalNumber = numbers.get(i + 2);
+			} else {
+				return false;
+			}
+		}
+	return false;	// default return value to ensure compilation
+}
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
 		if (numbers == null || numbers.size() < 1){
