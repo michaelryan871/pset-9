@@ -158,9 +158,29 @@ public class Exercises {
 		if (numbers == null || numbers.size() < 1){
 			return false;
 		}
-		// write your code here
 
-		return false;	// default return value to ensure compilation
+		// write your code here
+		boolean isEverywhere = true;
+
+		for (int i = 0; i < numbers.size(); i++) {
+			if (i == 0) {
+				if (numbers.get(i) != x && numbers.get(i + 1) != x) {
+						isEverywhere = false;
+					}
+				} else if (i == numbers.size() - 1) {
+					if (numbers.get(i) != x && numbers.get(i - 1) != x) {
+						isEverywhere = false;
+					}
+				} else {
+					if (numbers.get(i - 1) != x && numbers.get(i) != x && numbers.get(i + 1) != x){
+							isEverywhere = false;
+				}
+			}
+		}
+
+		return isEverywhere;
+
+		// return false;	// default return value to ensure compilation
 	}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
