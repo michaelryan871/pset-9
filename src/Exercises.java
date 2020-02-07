@@ -222,8 +222,25 @@ public class Exercises {
 			return -1;
 		}
 
+			int clumpAmount = 0;
+			boolean isClump = false;
+
+			for (int i = 1; i < values.size(); i++) {
+				if (values.get(i).equals(values.get(i - 1))){
+					if (!isClump) {
+						clumpAmount ++;
+					}
+					isClump = true;
+				} else {
+					isClump = false;
+				}
+			}
+
+			return clumpAmount;
+
+
 		// write your code here
 
-		return -1;		// default return value to ensure compilation
+		// return -1;		// default return value to ensure compilation
 	}
 }
